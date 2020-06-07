@@ -1,9 +1,14 @@
+ html {
+     background-color: whitesmoke;
+ }
+ 
  .main-container {
      position: absolute;
      width: 100%;
  }
  
  .header {
+     padding-top: 10px;
      height: 10vh;
      background-color: whitesmoke;
      font-size: 50px;
