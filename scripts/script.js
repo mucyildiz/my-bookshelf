@@ -102,7 +102,7 @@ generateTableHead(table, data);
 
 function toggleForm() {
     form = document.getElementById('bookForm')
-    if(form.style.display == 'none'){
+    if(form.style.display == 'none' || form.style.display == ''){
         form.style.display = 'block';
     }
     else{
