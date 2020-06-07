@@ -135,7 +135,23 @@ input[type=number]{
     box-sizing: border-box;
 }
 
+input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
 .formBtn {
     margin-top: 20px;
     margin-right: 10px;
+    padding: 10px 20px 10px 20px;
+}
+
+.delete {
+    width: 100px;
+    height: 40px;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-weight: 900;
 }

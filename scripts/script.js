@@ -24,7 +24,7 @@ function generateTableHead(table, data){
 }
 
 let table = document.querySelector('.library-table');
-let data = ['Title', 'Author', 'Pages', 'Status'];
+let data = ['Title', 'Author', 'Pages', 'Status', ''];
 
 
 
@@ -63,17 +63,29 @@ function populateRow(addedBook, row){
         let content = addedBook[item];
         if(content === true){
             let readBtn = createButton('darkgreen', 'white', 'Read');
-            cell.appendChild(readBtn)
+            cell.appendChild(readBtn);
         }
         else if(content === false){
             let unreadBtn = createButton('#990000', 'white', 'Not Read');
-            cell.appendChild(unreadBtn)
+            cell.appendChild(unreadBtn);
         }
         else{
             let text = document.createTextNode(content);
             cell.appendChild(text);
         }
     }
+    let clear = row.insertCell();
+    let deleteBtn = document.createElement('BUTTON');
+    deleteBtn.className = 'delete';
+    deleteBtn.innerHTML = 'Delete';
+    deleteBtn.addEventListener('click', deleteRow);
+    clear.appendChild(deleteBtn);
+}
+
+function deleteRow(){
+    var td = event.target.parentNode; 
+    var tr = td.parentNode; // the row to be removed
+    tr.parentNode.removeChild(tr);
 }
 
 function generateTable(table, bookArray){
