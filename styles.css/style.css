@@ -72,7 +72,7 @@ table.library-table tr td{
 
 .btn {
     margin: 0px auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     height: 60px;
     width: 130px;
     border: 2px solid #004d80;
@@ -92,4 +92,50 @@ table.library-table tr td{
 
 .btn:active {
     transform: translateZ(10px);
+}
+
+.form-container {
+    display: none;
+    position: relative;
+    border: thick solid #004d80;
+    border-radius: 50px;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+    background-color: white;
+    opacity: 100%;
+    margin-bottom: 10px;
+    padding: 10px 15px 15px 20px;
+}
+
+input[type=text]{
+    margin-bottom: 20px;
+    border: thin solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    font-size: 25px;
+    background-color: #004d80;
+    color: white;
+    padding-left: 10px;
+}
+
+input[type=text]::placeholder{
+    color: white;
+    opacity: 70%;
+}
+
+input[type=number]{
+    width: 15%;
+    height: 30px;
+    border: thin solid black;
+    border-radius: 9px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.formBtn {
+    margin-top: 20px;
+    margin-right: 10px;
 }

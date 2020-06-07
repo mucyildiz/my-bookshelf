@@ -57,26 +57,30 @@ function toggleButton(){
     }
 }
 
+function populateRow(addedBook, row){
+    for(let item in addedBook){
+        let cell = row.insertCell();
+        let content = addedBook[item];
+        if(content === true){
+            let readBtn = createButton('darkgreen', 'white', 'Read');
+            cell.appendChild(readBtn)
+        }
+        else if(content === false){
+            let unreadBtn = createButton('#990000', 'white', 'Not Read');
+            cell.appendChild(unreadBtn)
+        }
+        else{
+            let text = document.createTextNode(content);
+            cell.appendChild(text);
+        }
+    }
+}
+
 function generateTable(table, bookArray){
-    for(let element of bookArray){
+    for(let book of bookArray){
         let row = table.insertRow();
         row.className = 'row';
-        for(let item in element){
-            let cell = row.insertCell();
-            let content = element[item];
-            if(content === true){
-                let readBtn = createButton('darkgreen', 'white', 'Read');
-                cell.appendChild(readBtn)
-            }
-            else if(content === false){
-                let unreadBtn = createButton('#990000', 'white', 'Not Read');
-                cell.appendChild(unreadBtn)
-            }
-            else{
-                let text = document.createTextNode(content);
-                cell.appendChild(text);
-            }
-        }
+        populateRow(book, row);
     }
 }
 
@@ -84,8 +88,14 @@ function generateTable(table, bookArray){
 generateTable(table, library);
 generateTableHead(table, data);
 
-function openForm() {
-    document.getElementById('bookForm').style.display = 'block';
+function toggleForm() {
+    form = document.getElementById('bookForm')
+    if(form.style.display == 'none'){
+        form.style.display = 'block';
+    }
+    else{
+        form.style.display = 'none';
+    }
 }
 
 function closeForm() {
@@ -96,3 +106,15 @@ function addNewBook(){
     document.getElementById("bookForm").style.display = "block";
 }
 
+function addRow(){
+    let title = document.querySelector('[name="title"]').value;
+    let author = document.querySelector('[name="author"]').value;
+    let numberPages = document.querySelector('[name="pages"]').value;
+    let status = document.querySelector('[name="status"]').checked;
+    let bookToAdd = new Book(title, author, numberPages, status);
+    addBookToLib(bookToAdd);
+    console.log(library);
+
+    let addedRow = table.insertRow();
+    populateRow(bookToAdd, addedRow);
+}
