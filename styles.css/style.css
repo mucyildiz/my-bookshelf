@@ -1,0 +1,63 @@
+ .main-container {
+     position: absolute;
+     width: 100%;
+ }
+ 
+ .header {
+     height: 10vh;
+     background-color: whitesmoke;
+ }
+
+ .container {
+    padding-top: 100px;
+    height: 90vh;
+    background-color: whitesmoke;
+ }
+
+ .bookshelf-container {
+     width: 70%;
+     margin: auto;
+     font-size: 30px;
+ }
+
+ table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 0 5px #004d80;
+    border-radius: 30px;
+    overflow: hidden;
+    border-style: hidden;
+ }
+
+th {
+    padding: 10px 25px 10px 25px;
+    background-color: #004d80;
+    color: white;
+    font-weight: 800;
+}
+
+td {
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 0 15px 0;
+    background-color: white;
+    font-weight: 800;
+}
+
+.readBtn {
+    width: 100px;
+    height: 40px;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-weight: 900;
+}
+
+tr:nth-last-child(even) td{
+    background-color: #ccebff;
+}
+
+tr:nth-last-child(odd) td{
+    background-color: #99d6ff;
+}
