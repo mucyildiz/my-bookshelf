@@ -21,6 +21,7 @@
  }
 
  table {
+    font-family: fantasy;
     width: 100%;
     margin: 0 auto;
     border-collapse: collapse;
@@ -31,6 +32,7 @@
  }
 
 th {
+    font-family: fantasy;
     padding: 10px 25px 10px 25px;
     background-color: #004d80;
     color: white;
@@ -40,6 +42,7 @@ th {
 td {
     text-align: center;
     font-size: 20px;
+    font-family: fantasy;
     padding: 15px 0 15px 0;
     background-color: white;
     font-weight: 800;
@@ -60,4 +63,33 @@ tr:nth-last-child(even) td{
 
 tr:nth-last-child(odd) td{
     background-color: #99d6ff;
+}
+
+table.library-table tr td{
+    font-family: fantasy;
+}
+
+
+.btn {
+    margin: 0px auto;
+    margin-bottom: 20px;
+    height: 60px;
+    width: 130px;
+    border: 2px solid #004d80;
+    background-color: white;
+    border-radius: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 1px grey;
+    transform: scale(1.02);
+    font-size: 18px;
+    border: 3px solid #004d80;
+}
+
+.btn:active {
+    transform: translateZ(10px);
 }
